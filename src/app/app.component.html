@@ -1,3 +1,4 @@
+<app-autocomplete (setAddress)="getAddress($event)" adressType="geocode"></app-autocomplete>
 <app-time-weather 
     [temp]="currentWheater?.temp"
     tempMax="12"
@@ -27,5 +28,3 @@
 <app-pressure
     [info]="currentWheater?.pressure"
     ></app-pressure>
-
-<app-autocomplete (setAddress)="getAddress($event)" adressType="geocode"></app-autocomplete>

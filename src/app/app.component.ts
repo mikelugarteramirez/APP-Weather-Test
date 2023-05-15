@@ -24,7 +24,6 @@ export class AppComponent {
     this.latitude = place.geometry.location.lat();
     this.longitude = place.geometry.location.lng();
     this.location = place.formatted_address;
-    console.log(place.formatted_address);
     this.getWheater();
   }
 
