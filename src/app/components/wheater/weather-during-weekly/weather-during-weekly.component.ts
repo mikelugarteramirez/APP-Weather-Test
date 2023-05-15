@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-weather-during-weekly',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./weather-during-weekly.component.sass']
 })
 export class WeatherDuringWeeklyComponent implements OnInit {
+
+  @Input() daily: any[] = [];
 
   constructor() { }
 

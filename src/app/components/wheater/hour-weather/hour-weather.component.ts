@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-hour-weather',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./hour-weather.component.sass']
 })
 export class HourWeatherComponent implements OnInit {
+
+  @Input() hour: any = {};
 
   constructor() { }
 

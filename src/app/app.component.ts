@@ -10,21 +10,14 @@ import { WheaterService } from './services/wheater.service';
 export class AppComponent {
   currentWheater: WheaterCurrent | undefined;
   wheaterDetail: WheaterInformation | undefined;
+  hourly: any = [];
+  daily: any = [];
   latitude: number = 40.7127753;
   longitude: number = -74.0059728;
   location: string = 'Nueva York, EE. UU.';
   
   constructor(private weatherService: WheaterService) {
-    weatherService.getWheater(this.latitude, this.longitude).subscribe({
-      next: (response: any) => {
-        console.log(response);
-        this.currentWheater = response.current;
-        this.wheaterDetail = this.currentWheater?.weather[0];
-      },
-      error: (err) => {
-        console.log(err);
-      }
-    })
+    this.getWheater();
   }
 
   getAddress(place: any) {
@@ -41,6 +34,8 @@ export class AppComponent {
         console.log(response);
         this.currentWheater = response.current;
         this.wheaterDetail = this.currentWheater?.weather[0];
+        this.hourly = response.hourly;
+        this.daily = response.daily;
       },
       error: (err) => {
         console.log(err);

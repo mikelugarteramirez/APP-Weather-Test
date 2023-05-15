@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-sunset',
@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sunset.component.sass']
 })
 export class SunsetComponent implements OnInit {
+
+  @Input() info: any = '';
+  @Input() sunrise: any = '';
 
   constructor() { }
 

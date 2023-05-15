@@ -1,11 +1,11 @@
 <div class="container">
     <div>
-        1 a.m.
+        {{hour.dt | date:'h:mm a'}}
     </div>
     <div class="icon">
         <img src="http://openweathermap.org/img/wn/01d@2x.png" alt="">
     </div>
     <div>
-        22°
+        {{hour.temp | number: '1.0-0'}}°
     </div>
 </div>

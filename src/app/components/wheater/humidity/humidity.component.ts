@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-humidity',
@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./humidity.component.sass']
 })
 export class HumidityComponent implements OnInit {
+  @Input() info: any = '';
 
   constructor() { }
 

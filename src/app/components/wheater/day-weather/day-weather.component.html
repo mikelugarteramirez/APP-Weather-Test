@@ -1,11 +1,11 @@
 <div class="container">
     <div>
-        Monday
+        {{day.dt | date:'EEEE'}}
     </div>
     <div class="icon">
         <img src="http://openweathermap.org/img/wn/01d@2x.png" alt="">
     </div>
     <div class="temp">
-        22° - 25°
+        {{day?.temp?.min | number: '1.0-0'}}° - {{day?.temp?.max | number: '1.0-0'}}°
     </div>
 </div>

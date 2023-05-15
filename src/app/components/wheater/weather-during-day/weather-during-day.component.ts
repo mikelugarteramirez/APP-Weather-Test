@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-weather-during-day',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./weather-during-day.component.sass']
 })
 export class WeatherDuringDayComponent implements OnInit {
+
+  @Input() hourly: any[] = [];
 
   constructor() { }
 

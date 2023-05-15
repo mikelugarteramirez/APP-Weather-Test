@@ -1,11 +1,6 @@
 <div class="container">
     <div class="title">Weather during the day</div>
     <div class="scroll">
-        <app-hour-weather class="hour-weather"></app-hour-weather>
-        <app-hour-weather class="hour-weather"></app-hour-weather>
-        <app-hour-weather class="hour-weather"></app-hour-weather>
-        <app-hour-weather class="hour-weather"></app-hour-weather>
-        <app-hour-weather class="hour-weather"></app-hour-weather>
-        <app-hour-weather class="hour-weather"></app-hour-weather>
+        <app-hour-weather *ngFor="let hour of hourly" [hour]="hour" class="hour-weather"></app-hour-weather>
     </div>
 </div>

@@ -7,18 +7,25 @@
     [time]="currentWheater?.dt"
     ></app-time-weather>
 <app-weather-during-day
-    ></app-weather-during-day>
+    [hourly]="hourly"></app-weather-during-day>
 <app-weather-during-weekly
+    [daily]="daily"
     ></app-weather-during-weekly>
 <app-uv-ratio
+    [info]="currentWheater?.uvi"
     ></app-uv-ratio>
 <app-sunset
+    [info]="currentWheater?.sunset"
+    [sunrise]="currentWheater?.sunrise"
     ></app-sunset>
 <app-humidity
+    [info]="currentWheater?.humidity"
     ></app-humidity>
 <app-visibility
+    [info]="currentWheater?.visibility"
     ></app-visibility>
 <app-pressure
+    [info]="currentWheater?.pressure"
     ></app-pressure>
 
 <app-autocomplete (setAddress)="getAddress($event)" adressType="geocode"></app-autocomplete>
