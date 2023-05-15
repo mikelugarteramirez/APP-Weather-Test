@@ -1,1 +1,21 @@
-<p>time-weather works!</p>
+<div class="container">
+    <div>
+        <div>
+            <img src="http://openweathermap.org/img/wn/01d@2x.png" >
+        </div>
+        <div class="weather-info">
+            <span>City: {{geolocation}}</span>
+            <span>{{weather}}</span>
+        </div>
+        <div class="temp">
+            <span>{{temp}}°</span>
+            <div>
+                <span>Min: {{tempMin}}°</span>
+                <span>Max: {{tempMax}}°</span>
+            </div>
+        </div>
+    </div>
+    <div class="time">
+        2:44 P.M.
+    </div>
+</div>

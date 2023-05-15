@@ -8,6 +8,8 @@ import { SunsetComponent } from './sunset/sunset.component';
 import { HumidityComponent } from './humidity/humidity.component';
 import { VisibilityComponent } from './visibility/visibility.component';
 import { PressureComponent } from './pressure/pressure.component';
+import { HourWeatherComponent } from './hour-weather/hour-weather.component';
+import { DayWeatherComponent } from './day-weather/day-weather.component';
 
 
 
@@ -20,7 +22,9 @@ import { PressureComponent } from './pressure/pressure.component';
     SunsetComponent,
     HumidityComponent,
     VisibilityComponent,
-    PressureComponent
+    PressureComponent,
+    HourWeatherComponent,
+    DayWeatherComponent
   ],
   imports: [
     CommonModule
@@ -32,7 +36,10 @@ import { PressureComponent } from './pressure/pressure.component';
     UvRatioComponent,
     SunsetComponent,
     HumidityComponent,
-    VisibilityComponent
+    VisibilityComponent,
+    PressureComponent,
+    HourWeatherComponent,
+    DayWeatherComponent
   ]
 })
 export class WheaterModule { }
