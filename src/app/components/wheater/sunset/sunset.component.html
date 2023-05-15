@@ -4,7 +4,7 @@
         <span>Sunset</span>
     </div>
     <div class="info">
-        <span class="value">{{info | date: 'h:mm a'}}</span>
+        <span class="value">{{info * 1000| date: 'h:mm a'}}</span>
     </div>
-    <div class="description">Sunrise: {{sunrise | date: 'h:mm a'}}</div>
+    <div class="description">Sunrise: {{sunrise * 1000 | date: 'h:mm a'}}</div>
 </div>

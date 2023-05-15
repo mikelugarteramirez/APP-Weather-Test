@@ -1,6 +1,6 @@
 <div class="container">
     <div>
-        {{hour.dt | date:'h:mm a'}}
+        {{hour.dt * 1000 | date:'h:mm a'}}
     </div>
     <div class="icon">
         <img src="http://openweathermap.org/img/wn/01d@2x.png" alt="">

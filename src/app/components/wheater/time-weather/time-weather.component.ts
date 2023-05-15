@@ -10,7 +10,7 @@ export class TimeWeatherComponent implements OnInit {
   @Input() temp: string | number | undefined = '';
   @Input() tempMax: string | number | undefined = '';
   @Input() tempMin: string | number | undefined = '';
-  @Input() time: string | number | undefined = '';
+  @Input() time: any  = 0;
   @Input() geolocation: string | number | undefined = '';
   @Input() weather: string | number | undefined = '';
 
