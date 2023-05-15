@@ -7,12 +7,12 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class TimeWeatherComponent implements OnInit {
 
-  @Input() temp: string | number = '';
-  @Input() tempMax: string | number = '';
-  @Input() tempMin: string | number = '';
-  @Input() time: string | number = '';
-  @Input() geolocation: string | number = '';
-  @Input() weather: string | number = '';
+  @Input() temp: string | number | undefined = '';
+  @Input() tempMax: string | number | undefined = '';
+  @Input() tempMin: string | number | undefined = '';
+  @Input() time: string | number | undefined = '';
+  @Input() geolocation: string | number | undefined = '';
+  @Input() weather: string | number | undefined = '';
 
   constructor() {}
 

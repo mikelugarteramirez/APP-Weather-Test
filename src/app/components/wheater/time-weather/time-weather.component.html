@@ -8,7 +8,7 @@
             <span>{{weather}}</span>
         </div>
         <div class="temp">
-            <span>{{temp}}°</span>
+            <span>{{temp | number: '1.0-0'}}°</span>
             <div>
                 <span>Min: {{tempMin}}°</span>
                 <span>Max: {{tempMax}}°</span>
@@ -16,6 +16,6 @@
         </div>
     </div>
     <div class="time">
-        2:44 P.M.
+        {{time | date:'h:mm a'}}
     </div>
 </div>

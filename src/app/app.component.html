@@ -1,9 +1,10 @@
 <app-time-weather 
-    temp="10"
+    [temp]="currentWheater?.temp"
     tempMax="12"
     tempMin="7"
-    geolocation="Mexico"
-    weather="Clear"
+    [geolocation]="location"
+    [weather]="wheaterDetail?.main"
+    [time]="currentWheater?.dt"
     ></app-time-weather>
 <app-weather-during-day
     ></app-weather-during-day>
@@ -19,3 +20,5 @@
     ></app-visibility>
 <app-pressure
     ></app-pressure>
+
+<app-autocomplete (setAddress)="getAddress($event)" adressType="geocode"></app-autocomplete>
