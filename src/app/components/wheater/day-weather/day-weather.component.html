@@ -3,7 +3,7 @@
         {{day.dt * 1000 | date:'EEEE'}}
     </div>
     <div class="icon">
-        <img src="http://openweathermap.org/img/wn/01d@2x.png" alt="">
+        <img [src]="url" alt="">
     </div>
     <div class="temp">
         {{day?.temp?.min | number: '1.0-0'}}° - {{day?.temp?.max | number: '1.0-0'}}°

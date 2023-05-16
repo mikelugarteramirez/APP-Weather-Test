@@ -1,7 +1,7 @@
 <div class="container">
     <div>
         <div>
-            <img src="http://openweathermap.org/img/wn/01d@2x.png" >
+            <img [src]="url" >
         </div>
         <div class="weather-info">
             <span>City: {{geolocation}}</span>
@@ -16,6 +16,6 @@
         </div>
     </div>
     <div class="time">
-        {{time * 1000| date:'h:mm a'}}
+        {{timer}}
     </div>
 </div>

@@ -7,10 +7,12 @@ import { AppComponent } from './app.component';
 import { BasicModule } from './components/basic/basic.module';
 import { WheaterModule } from './components/wheater/wheater.module';
 import { GoogleMapsComponentsModule } from './components/google-maps-components/google-maps-components.module';
+import { HomeComponent } from './components/screens/home/home.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

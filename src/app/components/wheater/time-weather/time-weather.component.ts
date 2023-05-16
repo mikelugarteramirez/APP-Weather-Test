@@ -1,4 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, SimpleChanges } from '@angular/core';
+import { timer } from 'rxjs';
+import * as moment from 'moment-timezone';
 
 @Component({
   selector: 'app-time-weather',
@@ -13,10 +15,30 @@ export class TimeWeatherComponent implements OnInit {
   @Input() time: any  = 0;
   @Input() geolocation: string | number | undefined = '';
   @Input() weather: string | number | undefined = '';
+  @Input() timezone: string = '';
+  @Input() urlImage: string | undefined = '';
+  
+  timer: string = '';
+  url: string = '';
+
+
 
   constructor() {}
 
   ngOnInit(): void {
+  }
+
+  ngOnChanges(changes: any) {
+    if(changes.time){
+      changes.time.currentValue;
+      this.startTime();
+    }
+    this.url = `http://openweathermap.org/img/wn/${this.urlImage}@2x.png`
+  }
+
+  startTime() {
+    this.timer = moment.tz(this.timezone).format('hh:mm:ss a');
+    timer(1000).subscribe(n => this.startTime());
   }
 
 }

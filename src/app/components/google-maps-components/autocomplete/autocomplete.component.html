@@ -1,7 +1,3 @@
 <div class="container">
-        <input class="searchLocation" 
-        type="text"
-        placeholder="Search your city"
-        [(ngModel)]="autocompleteInput"
-        #addresstext style="padding: 12px 20px; border: 1px solid #ccc; width: 400px">
+        <input ngx-google-places-autocomplete  (onAddressChange)="addressChange($event)"/>
 </div>
