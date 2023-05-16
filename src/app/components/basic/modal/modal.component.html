@@ -1,0 +1,20 @@
+<div class="modalDialog">
+    <div class="container">
+        <div (click)="close()" class="close">X</div>
+        <div class="information">
+            <app-uv-ratio
+            [info]="information?.uvi"
+            ></app-uv-ratio>
+            <app-sunset
+            [info]="information?.sunset"
+            [sunrise]="information?.sunrise"
+            ></app-sunset>
+            <app-humidity
+            [info]="information?.humidity"
+            ></app-humidity>
+            <app-pressure
+            [info]="information?.pressure"
+            ></app-pressure>
+        </div>
+	</div>
+</div>

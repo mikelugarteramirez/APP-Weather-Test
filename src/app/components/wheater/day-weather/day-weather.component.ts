@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-day-weather',
@@ -8,6 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class DayWeatherComponent implements OnInit {
   
   @Input() day: any = {};
+  @Output() setOpenInformation: EventEmitter<any> = new EventEmitter();
 
   url: string | undefined = '';
 
@@ -18,6 +19,10 @@ export class DayWeatherComponent implements OnInit {
 
   ngOnChanges(changes: any) {
     this.url = `http://openweathermap.org/img/wn/${this.day?.weather[0].icon}@2x.png`
+  }
+
+  clickInformation() {
+    this.setOpenInformation.emit(this.day);
   }
 
 }

@@ -17,6 +17,8 @@ export class HomeComponent  {
   longitude: number = -74.0059728;
   location: string = 'Nueva York, EE. UU.';
   timezone: string = 'America/New_York'
+  show: boolean = false;
+  modalInformation: any;
   
   constructor(public weatherService: WheaterService) {
     this.getWheater();
@@ -51,6 +53,16 @@ export class HomeComponent  {
         console.log(err);
       }
     })
+  }
+
+  openDetailDay(day: any) {
+    console.log(day);
+    this.modalInformation = day;
+    this.show = true;
+  }
+
+  closeModal() {
+    this.show = false;
   }
 
 }

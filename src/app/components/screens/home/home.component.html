@@ -13,6 +13,7 @@
     [hourly]="hourly"></app-weather-during-day>
 <app-weather-during-weekly
     [daily]="daily"
+    (setOpenInformation)="openDetailDay($event)"
     ></app-weather-during-weekly>
 <app-uv-ratio
     [info]="currentWheater?.uvi"
@@ -30,3 +31,4 @@
 <app-pressure
     [info]="currentWheater?.pressure"
     ></app-pressure>
+<app-modal (setClose)="closeModal()" [information]="modalInformation" *ngIf="show"></app-modal>

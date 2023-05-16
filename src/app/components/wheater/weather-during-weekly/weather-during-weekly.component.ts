@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-weather-during-weekly',
@@ -8,10 +8,15 @@ import { Component, OnInit, Input } from '@angular/core';
 export class WeatherDuringWeeklyComponent implements OnInit {
 
   @Input() daily: any[] = [];
+  @Output() setOpenInformation: EventEmitter<any> = new EventEmitter();
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  resendInformation(day: any) {
+    this.setOpenInformation.emit(day)
   }
 
 }
